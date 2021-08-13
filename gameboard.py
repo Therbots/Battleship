@@ -8,6 +8,7 @@ class Gameboard:
         cols = 20
         rows = 20
         self.gameboard = [[0] * cols] * rows
+        self.gameboard[0][0] = 1
 
         for row in self.gameboard:
             print(row)

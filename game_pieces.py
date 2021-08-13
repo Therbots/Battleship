@@ -3,13 +3,13 @@ class Game_Pieces:
         pass
 
     def destroyer(self):
-        pass
+        self.length = 2
 
     def submarine(self):
-        pass
+        self.length = 3
 
     def battleship(self):
-        pass
-    
+        self.length = 4
+
     def aircraft_carrier(self):
-        pass
+        self.length = 5
