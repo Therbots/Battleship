@@ -23,9 +23,10 @@ class Gameboard:
             self.gameboard[0][i] = i
             i += 1
         
-        #Print Gameboard
+        self.print_gameboard()     
+            
+    def print_gameboard(self):
+             #Print Gameboard
         for row in self.gameboard:
             mx= 3
             print(" ".join(["{:<{mx}}".format(ele,mx=mx) for ele in row])) #Formats rows to be 3 characters wide
-            
-      
