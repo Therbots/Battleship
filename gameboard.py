@@ -8,6 +8,7 @@ class Gameboard:
         cols = 11
         rows = 11
       
+        #Make Gameboard 2d Array
         self.gameboard = [[0 for i in range(cols)] for j in range(rows)]
        
         #Label Columns
