@@ -17,20 +17,26 @@ class Player:
         for ship in self.game_pieces.ship_list:
             self.orientation = input("Do you want to place your ship 'horizontal' or 'vertical'? ")
             if self.orientation == 'horizontal':
-                row_coordinates = input('Enter the row number that you want your ship placed: ')
-                col_coordinates = input('Enter the columm number that you want your ship to be placed: ')
+                row_coordinates = int(input('Enter the row number that you want your ship placed: '))
+                col_coordinates = int(input('Enter the columm number that you want your ship to be placed: '))
                 i = 0
                 while i < ship.size:
                     # self.gameboard_self[row_coordinates][col_coordinates + i] = 'o'
-                    self.gameboard_self.gameboard[int(row_coordinates)][int(col_coordinates) + i] = 'o'
+                    self.gameboard_self.gameboard[row_coordinates][col_coordinates + i] = 'o'
                     i += 1
                 self.gameboard_self.print_gameboard()                
 
 
             else:
-                col_coordinates = input('Enter the columm number that you want your ship to be placed: ')
-                row_coordinates = input('Enter the row number that you want your ship placed: ')
-
+                
+                row_coordinates = int(input('Enter the row number that you want your ship placed: '))
+                col_coordinates = int(input('Enter the columm number that you want your ship to be placed: '))
+                i = 0
+                while i < ship.size:
+                    # self.gameboard_self[row_coordinates][col_coordinates + i] = 'o'
+                    self.gameboard_self.gameboard[row_coordinates + i][col_coordinates] = 'o'
+                    i += 1
+                self.gameboard_self.print_gameboard()  
     
 
 
