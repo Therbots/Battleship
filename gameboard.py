@@ -7,21 +7,24 @@ class Gameboard:
     def make_gameboard(self):
         cols = 21
         rows = 21
-        alpha_list = [0, 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ,'j', 
-                        'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't']
-        # self.gameboard = [[0] * cols] * rows
+      
         self.gameboard = [[0 for i in range(cols)] for j in range(rows)]
+       
+        #Label Columns
         i = 0
         while i < 21:
             self.gameboard[i][0] = i
             i += 1
-        # self.gameboard = [[0 for i in range(cols)] for j in range(rows)]
+
+        #Label Rows
         i = 0
         while i < 21:
-            self.gameboard[0][i] = alpha_list[i]
+            self.gameboard[0][i] = i
             i += 1
         
-
+        #Print Gameboard
         for row in self.gameboard:
-            print(row)
-        
+            mx= 3
+            print(" ".join(["{:<{mx}}".format(ele,mx=mx) for ele in row])) #Formats rows to be 3 characters wide
+            
+      
