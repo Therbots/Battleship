@@ -19,12 +19,29 @@ class Player:
             if self.orientation == 'horizontal':
                 row_coordinates = int(input('Enter the row number that you want your ship placed: '))
                 col_coordinates = int(input('Enter the columm number that you want your ship to be placed: '))
+                
+            #checking for occupied spaces
                 i = 0
+                open_space = True
                 while i < ship.size:
-                    # self.gameboard_self[row_coordinates][col_coordinates + i] = 'o'
-                    self.gameboard_self.gameboard[row_coordinates][col_coordinates + i] = 'o'
-                    i += 1
-                self.gameboard_self.print_gameboard()                
+                    if(self.gameboard_self.gameboard[row_coordinates][col_coordinates + i] == "o"):
+                        open_space = False
+                        print("Already a ship here please enter another coordinate.")
+                        self.set_pieces()
+                        return
+                    else:
+                        i += 1
+                        
+
+                if(open_space):
+                    i = 0
+                    while i < ship.size:
+                        self.gameboard_self.gameboard[row_coordinates][col_coordinates + i] = 'o'
+                        i += 1
+                    self.gameboard_self.print_gameboard() 
+                
+                
+               
 
 
             else:
@@ -33,7 +50,6 @@ class Player:
                 col_coordinates = int(input('Enter the columm number that you want your ship to be placed: '))
                 i = 0
                 while i < ship.size:
-                    # self.gameboard_self[row_coordinates][col_coordinates + i] = 'o'
                     self.gameboard_self.gameboard[row_coordinates + i][col_coordinates] = 'o'
                     i += 1
                 self.gameboard_self.print_gameboard()  
