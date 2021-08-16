@@ -20,7 +20,7 @@ class Player:
                 row_coordinates = input('Enter the row number that you want your ship placed: ')
                 col_coordinates = input('Enter the columm number that you want your ship to be placed: ')
                 i = 0
-                while i <= ship.size:
+                while i < ship.size:
                     # self.gameboard_self[row_coordinates][col_coordinates + i] = 'o'
                     self.gameboard_self.gameboard[int(row_coordinates)][int(col_coordinates) + i] = 'o'
                     i += 1
