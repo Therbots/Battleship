@@ -26,6 +26,7 @@ class Player:
                 while i < ship.size:
                     if(self.gameboard_self.gameboard[row_coordinates][col_coordinates + i] == "o"):
                         open_space = False
+                        self.gameboard_self.print_gameboard()
                         print("Already a ship here please enter another coordinate.")
                         self.set_pieces()
                         return

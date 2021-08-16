@@ -11,6 +11,7 @@ class Game:
 
     def run_game(self):
         self.player_one.set_pieces()
+        self.player_two.set_pieces()
        
 
         
