@@ -1,11 +1,11 @@
 from player import Player
 from gameboard import Gameboard
-from game_pieces import Game_Pieces
+
 
 
 class Game:
     def __init__(self):
-        self.pieces = Game_Pieces()
+        self.player = Player()
 
     def run_game(self):
         gameboard_p1_self = Gameboard()
