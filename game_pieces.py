@@ -1,15 +1,24 @@
+from ship import Ship
+
 class Game_Pieces:
     def __init__(self):
-        pass
+        self.ship_list = []
+        self.create_pieces()
 
-    def destroyer(self):
-        self.length = 2
 
-    def submarine(self):
-        self.length = 3
+    def create_pieces(self):
+        destroyer = Ship("Destroyer", 2)
+        submarine = Ship("Submarine", 3)
+        battleship = Ship("Battleship", 4)
+        aircraft_carrier = Ship("Aircraft Carrier", 5)
+        self.ship_list.append(destroyer)
+        self.ship_list.append(submarine)
+        self.ship_list.append(battleship)
+        self.ship_list.append(aircraft_carrier)
 
-    def battleship(self):
-        self.length = 4
+ 
 
-    def aircraft_carrier(self):
-        self.length = 5
+        
+
+
+        
