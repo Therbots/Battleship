@@ -5,20 +5,20 @@ class Gameboard:
 
 
     def make_gameboard(self):
-        cols = 21
-        rows = 21
+        cols = 11
+        rows = 11
       
         self.gameboard = [[0 for i in range(cols)] for j in range(rows)]
        
         #Label Columns
         i = 0
-        while i < 21:
+        while i < 11:
             self.gameboard[i][0] = i
             i += 1
 
         #Label Rows
         i = 0
-        while i < 21:
+        while i < 11:
             self.gameboard[0][i] = i
             i += 1
         
