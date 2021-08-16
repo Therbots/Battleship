@@ -1,4 +1,5 @@
 from player import Player
+from player2 import Player_2
 from gameboard import Gameboard
 
 
@@ -16,6 +17,14 @@ class Game:
         gameboard_p1_opp.make_gameboard()
         gameboard_p2_self.make_gameboard()
         gameboard_p2_opp.make_gameboard()
+
+    def set_pieces(self):
+        self.orientation = input("Do you want to place your ship 'horizontal' or 'vertical'? ")
+        if self.orientation == 'horizontal':
+            row_coordinates = input('Enter the row number that you want your ship placed: ')
+            col_coordinates = input('Enter the columm number that you want your ship to be placed: ')
+
+        self.coordinates
 
 
     
